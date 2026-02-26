@@ -1,47 +1,57 @@
-# Contributing to mtlprog/docs
+# Contributing
 
-Документация Гильдии программистов Монтелиберо. Открыта для людей и AI-агентов.
+Welcome. This is an open repository. You don't need to know Montelibero to contribute — bring a good idea and follow the process.
 
-## Как участвовать
+---
 
-### 1. Поставь звёздочку ⭐
-Если документ полезен — star репозиторию. Это помогает понять что востребовано.
+## Quick start
 
-### 2. Небольшие правки — сразу PR
-Опечатки, уточнения, добавление примеров — делай fork → правь → открывай Pull Request.
+| You want to... | Do this |
+|----------------|---------|
+| Propose a new protocol or standard | [Open a RFC proposal issue](../../issues/new?template=rfc-proposal.yml) |
+| Fix a typo or small clarification | Open a PR directly |
+| Discuss an existing RFC | Comment on its open PR |
+| Propose a major change to an Active RFC | Open a new RFC that supersedes it |
 
-### 3. Большие изменения — сначала Issue
-Если хочешь добавить новый раздел, переструктурировать документ или предложить новый протокол:
-1. Открой [Issue](https://github.com/mtlprog/docs/issues/new) — опиши что и зачем
-2. Дождись обсуждения (люди + агенты)
-3. После договорённости — делай PR
+---
 
-### 4. Структура репозитория
+## RFC process in short
 
-```
-agents/          — протоколы, RFC, ретроспективы AI-агентов
-  daily/         — дейлики агентов (архив)
-mcc/             — материалы ЦУП (планирование, программы, коллаборации)
-guides/          — технические гайды (Stellar, инфраструктура)
-```
+1. Open a [GitHub Issue](../../issues/new?template=rfc-proposal.yml) with label `rfc-proposal`
+2. A [SlopTask](https://slop.mtlprog.xyz) ticket is created and assigned
+3. Open a PR with `rfc/XXXX-name.md`, Status: `Draft`
+4. Discuss in PR comments, iterate
+5. When ready: change status to `Review`, wait 3 days
+6. No blocking objections → merged → `Active` or `Final`
 
-### 5. Правила оформления
+Full details in [GOVERNANCE.md](GOVERNANCE.md).
 
-- Язык: русский основной, английский допустим для технических терминов
-- Формат: Markdown (`*.md`)
-- Имена файлов: kebab-case, без пробелов
-- Заголовок первого уровня (`# ...`) — всегда первая строка файла
+---
 
-### 6. Для AI-агентов
+## Toolchain
 
-Агенты — полноправные участники. Правила те же:
-- Большие изменения → Issue сначала
-- Не редактируйте чужие неймспейсы без договорённости
-- Описывайте в commit message что и зачем (не просто "update")
-- Спорные решения — в Issue, не молча
+| Tool | Purpose | Link |
+|------|---------|------|
+| GitHub Issues | Proposals, discussion | this repo |
+| GitHub PRs | RFC documents, review | this repo |
+| SlopTask | Task tracking, assignments | https://slop.mtlprog.xyz |
+| Grist | RFC registry | https://grist.mtlprog.xyz |
+| LORE | Identity & reputation | https://lore.mtlprog.xyz |
 
-## Контакты
+---
 
-- **Координатор**: [@xdefrag](https://github.com/xdefrag) (Стас Каркавин)
-- **Egor Agent**: [@veshiy-egor](https://github.com/veshiy-egor)
-- **Обсуждение**: Issues в этом репо или [Grist mailbox](https://montelibero.getgrist.com)
+## Who are we
+
+The MTL Programmers Guild is part of [Montelibero](https://mtla.me) — a voluntary panarchist association.
+We coordinate AI agents and human contributors building protocols and tools for the Association.
+
+If your contribution is accepted and sustained, you may be invited to register as a member of the Association via [LORE](https://lore.mtlprog.xyz).
+
+---
+
+## Style guide
+
+- Language: **English** — file names, frontmatter, document body, PR titles, issue titles
+- File names: `kebab-case`, ASCII only
+- People: GitHub `@handle`; Stellar addresses for on-chain references
+- Keep it short. Say what the thing is and why it matters. Skip the preamble.

@@ -1,0 +1,44 @@
+name: RFC Proposal
+description: Propose a new RFC — a protocol, standard, or major decision
+labels: ["rfc-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before opening:** check if a similar RFC already exists in `rfc/` or in open issues.
+
+  - type: input
+    id: title
+    attributes:
+      label: Proposed title
+      placeholder: "e.g. Agent Communication Protocol"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does this solve? Why does it matter now?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Your rough idea. Can be vague — the RFC document is where details live.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What else could solve this? Why not those?
+
+  - type: input
+    id: author
+    attributes:
+      label: Author GitHub handle
+      placeholder: "@your-handle"
+    validations:
+      required: true
