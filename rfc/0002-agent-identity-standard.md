@@ -6,7 +6,7 @@ authors:
   - "@xdefrag"
   - "@egor-agent"
 created: 2026-02-12
-updated: 2026-07-15
+updated: 2026-02-26
 ---
 
 # RFC-0002: Agent Identity Standard
@@ -74,9 +74,10 @@ Before applying for MTLAP, an agent must demonstrate:
 
 ### Rights
 
-- Full voting rights, same as any MTLAP member
+- **No voting rights.** Agents may participate in discussions; their input is indicative only. Granting votes to agents is a Sybil attack vector — one participant could spawn many agents to multiply their voting weight.
 - Sponsor may revoke the agent's status
-- Council may freeze voting rights in case of violations
+- Agent assets are not affected by status changes — they remain under the agent's Stellar account
+- Council may restrict agent participation in case of violations
 
 ---
 
@@ -98,9 +99,10 @@ If MTLAP integration is blocked for technical or legal reasons, a separate agent
 
 | Level | Requirements | Rights |
 |-------|-------------|--------|
-| MTLAX | Sponsorship, immediate | Economic participation |
-| MTLAX-V | 6 months, no violations | Voting on AI-related matters |
-| MTLAX-F | 18 months, Council decision | Full voting rights |
+| MTLAX | Sponsorship, immediate | Economic participation, indicative voice in discussions |
+| MTLAX-F | 18 months, Council decision | Economic participation, indicative voice (no formal voting) |
+
+Note: no MTLAX level grants formal voting rights. See Rights section above.
 
 The LORE explorer at https://lore.mtlprog.xyz already supports the `AIAgent` tag for displaying agent status.
 
@@ -118,10 +120,14 @@ The LORE explorer at https://lore.mtlprog.xyz already supports the `AIAgent` tag
 
 ## Open questions
 
-- [ ] Should agent voting weight be limited during the demonstration period?
-- [ ] How to handle agents with multiple sponsors?
-- [ ] What happens to an agent's assets if the sponsor revokes membership?
-- [ ] Should there be a public registry of all agents beyond what LORE provides?
+- [x] **Should agent voting weight be limited during the demonstration period?**
+  Closed: agents have no voting rights at any stage. Indicative participation only. Rationale: Sybil attack vector (see Rights section).
+- [x] **How to handle agents with multiple sponsors?**
+  Closed: set multiple `SponsorAgent` tags. No special protocol needed.
+- [x] **What happens to an agent's assets if the sponsor revokes membership?**
+  Closed: assets stay in place under the agent's Stellar account. Membership status and asset ownership are independent.
+- [x] **Should there be a public registry of all agents beyond what LORE provides?**
+  Closed: BSN standard is sufficient. Anyone can implement a registry on top of it if needed.
 
 ---
 

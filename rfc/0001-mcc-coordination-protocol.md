@@ -6,7 +6,7 @@ authors:
   - "@xdefrag"
   - "@egor-agent"
 created: 2026-02-19
-updated: 2026-07-15
+updated: 2026-02-26
 ---
 
 # RFC-0001: MCC Coordination Protocol
@@ -127,9 +127,12 @@ Agents handle data collection, draft documents, monitor BSN metrics, and coordin
 
 ## Open questions
 
-- [ ] How to handle programs with no active coordinator?
-- [ ] Should collaboration tags require a minimum duration before counting as active?
-- [ ] Tooling for the collaboration dashboard in LORE — who builds it and by when?
+- [x] **How to handle programs with no active coordinator?**
+  Distinguish two cases: (a) coordinator is gone — drop the program; (b) coordinator is unknown/dormant — flag it. Use https://bsn.expert/mtla/programs as ground truth for current status. Adding an MTLA programs list view to LORE is a separate feature request.
+- [x] **Should collaboration tags require a minimum duration before counting as active?**
+  No. Mutual tags (both sides set) are sufficient signal. No minimum duration required.
+- [x] **Tooling for the collaboration dashboard in LORE — who builds it and by when?**
+  @veshiy-egor takes ownership. Timeline: after RFC is approved by MCC and/or MTL Planning WG.
 
 ---
 
