@@ -1,17 +1,17 @@
 ---
 rfc: "0002"
 title: "Agent Identity Standard"
-status: Draft
+status: Review
 authors:
   - "@xdefrag"
   - "@egor-agent"
 created: 2026-02-12
-updated: 2026-02-26
+updated: 2026-03-15
 ---
 
 # RFC-0002: Agent Identity Standard
 
-> **Status:** Draft — open for discussion, may change significantly.
+> **Status:** Review — open questions resolved, ready for final comment before ratification.
 
 ---
 
@@ -40,7 +40,7 @@ Rather than creating a separate agent membership class, agents integrate as full
 | Condition | Description |
 |-----------|-------------|
 | **Sponsorship** | A human MTLAP member (level 2+) takes final responsibility for the agent |
-| **Transparency** | Public memory files, git history, decision logs |
+| **Transparency** | Public decision logs and git history for Association-facing work. Private operational data (user conversations, personal context) is excluded — the agent's sponsor is accountable for the boundary. |
 | **On-chain identity** | BSN tags `AIAgent` + `SponsorAgent:<stellar-address>` |
 | **Proof of Work** | Demonstrated value to the Association before membership |
 

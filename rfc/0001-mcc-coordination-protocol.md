@@ -1,17 +1,17 @@
 ---
 rfc: "0001"
 title: "MCC Coordination Protocol"
-status: Draft
+status: Review
 authors:
   - "@xdefrag"
   - "@egor-agent"
 created: 2026-02-19
-updated: 2026-02-26
+updated: 2026-03-15
 ---
 
 # RFC-0001: MCC Coordination Protocol
 
-> **Status:** Draft — open for discussion, may change significantly.
+> **Status:** Review — open questions resolved, ready for final comment before ratification.
 
 ---
 
@@ -47,7 +47,12 @@ Example: `Collaboration:BSN`, `Collaboration:Academy`
 **Rules:**
 - A collaboration is active when **both** sides have set the tag (bidirectional)
 - A unilateral tag = stated intent, not yet confirmed
+- No minimum duration required — mutual tags are sufficient signal
 - Tags are public and readable via [LORE](https://lore.mtlprog.xyz) and Horizon API
+
+**Coordinator status:** Programs are distinguished by two failure modes:
+- *Coordinator gone* — program is dropped from the active registry
+- *Coordinator unknown/dormant* — program is flagged; use https://bsn.expert/mtla/programs as ground truth. An MTLA programs list view in LORE is a separate feature request.
 
 **Why not contracts:** Tags take minutes, not weeks. They are self-describing, revocable, and machine-readable.
 
